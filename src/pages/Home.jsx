@@ -19,7 +19,6 @@ export default function Home() {
         if (response.ok) {
           refetch();
         } else {
-          // Handle non-OK responses
           const errorData = await response.json().catch(() => ({}));
           alert(
             `Failed to delete: ${errorData.message || response.statusText}`
